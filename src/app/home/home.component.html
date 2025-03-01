@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        
+        <i class="fas fa-user-circle"></i>  {{turfname}}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page"  routerLink="/landing">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/terms">Terms&Conditions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contactus">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" routerLink="">Logout</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row m-3">
+
+       <h3 class="headclass" style="text-align: center;"> Total Customer Records</h3>
+        <div class="card mb-3" *ngFor="let item of getdata; let i=index">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Name : {{item.name}}</h2>
+
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Mobile : {{item.mobileno}}</h2>
+            </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Time Slots : {{item.timeslots}}</h2>
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Payment Status : {{item.status}}</h2>
+              </li>
+            </ul>
+        </div>
+    </div>
+    
+</div>

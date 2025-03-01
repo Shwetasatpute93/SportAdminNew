@@ -1,0 +1,133 @@
+// body {
+//     margin: 0;
+//   }
+  
+
+//   .main-div {
+//     width: 350px;
+//     height: 250px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-content: space-between;
+//     transform: perspective(500px) rotateY(-42deg);
+//     -webkit-transform: perspective(500px) rotateY(-42deg);
+//     -moz-transform: perspective(500px) rotateY(-42deg);
+//     -ms-transform: perspective(500px) rotateY(-42deg);
+//     -o-transform: perspective(500px) rotateY(-42deg);
+//     animation-name: rotate-windows;
+//     animation-iteration-count: infinite;
+//     animation-duration: 3s;
+//     animation-fill-mode: forwards;
+//   }
+  
+//   h4{
+//     margin: 9px;
+//     font-size: 24px;
+//     font-family: math;
+//     font-weight: 700;
+//     text-align: center;
+//     color: #dc3545;
+// }
+  
+//   .logo {
+//     // background-color: #00adef;
+//     width: 150px;
+//     height: 150px;
+//     padding: 11px;
+//     /* text-align: center; */
+//     align-self: center;
+//   }
+ 
+// //   @keyframes rotate-windows {
+// //     0% {
+// //       transform: perspective(500px) rotateY(-42deg);
+// //       -webkit-transform: perspective(500px) rotateY(-42deg);
+// //       -moz-transform: perspective(500px) rotateY(-42deg);
+// //       -ms-transform: perspective(500px) rotateY(-42deg);
+// //       -o-transform: perspective(500px) rotateY(-42deg);
+// //     }
+// //     50% {
+// //       transform: perspective(500px) rotateY(0deg);
+// //       -webkit-transform: perspective(500px) rotateY(0deg);
+// //       -moz-transform: perspective(500px) rotateY(0deg);
+// //       -ms-transform: perspective(500px) rotateY(0deg);
+// //       -o-transform: perspective(500px) rotateY(0deg);
+// //     }
+// //     100% {
+// //       transform: perspective(500px) rotateY(-42deg);
+// //       -webkit-transform: perspective(500px) rotateY(-42deg);
+// //       -moz-transform: perspective(500px) rotateY(-42deg);
+// //       -ms-transform: perspective(500px) rotateY(-42deg);
+// //       -o-transform: perspective(500px) rotateY(-42deg);
+// //     }
+// //   }
+//   .button {
+//     border-radius: 4px;
+//     background-color: #fb2b38;
+//     border: none;
+//     color: #ffffff;
+//     text-align: center;
+//     font-size: 28px;
+//     font-family: math;
+//     font-weight: 700;
+//     transition: all 0.5s;
+//     cursor: pointer;
+//     margin: 34px;
+//     width: 220px;
+//   }
+  
+//   .button span {
+//     cursor: pointer;
+//     display: inline-block;
+//     position: relative;
+//     transition: 0.5s;
+//     // width: 220px;
+//   }
+  
+//   .button span:after {
+//     content: '\00bb';
+//     position: absolute;
+//     opacity: 0;
+//     top: 0;
+//     right: -20px;
+//     transition: 0.5s;
+//   }
+  
+//   .button:hover span {
+//     padding-right: 25px;
+//   }
+  
+//   .button:hover span:after {
+//     opacity: 1;
+//     right: 0;
+//   }
+.py-5{
+  padding-bottom: 6rem !important;
+}
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #249dee, #4539e8, #3616ac, #4c45b4);
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #249dee, #4539e8, #3616ac, #4c45b4);
+  }
+  
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+  }
+
+  .fa-lg{
+    height: 1.85em;
+  }

@@ -1,0 +1,82 @@
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+
+        <div class="card">
+            <div class="card-body">
+                <form class="row g-3 needs-validation" [formGroup]="turfForm" novalidate>
+                    <div class="col-md-12">
+                      <label for="validationCustom01" class="form-label">Mobile No<span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" id="validationCustom01" formControlName="mobileno" required>
+                      <div *ngIf="mobileno?.invalid && (mobileno?.dirty || mobileno?.touched)">
+                            <div *ngIf="mobileno?.hasError('required')" style="color: red;">
+                                Mobile no is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom07" class="form-label">Password<span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" formControlName="password" id="validationCustom07" required>
+                      <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                        <div *ngIf="password?.hasError('required')" style="color: red;">
+                            Password is required.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom02" class="form-label">Turf Name<span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" id="validationCustom02" formControlName="turfname" required>
+                      <div *ngIf="turfname?.invalid && (turfname?.dirty || turfname?.touched)">
+                        <div *ngIf="turfname?.hasError('required')" style="color: red;">
+                            Turf Name is required.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom03" class="form-label">Address<span style="color: red;">*</span></label>
+                      <textarea type="text" class="form-control" id="validationCustom03" formControlName="address" required></textarea>
+                      <div *ngIf="address?.invalid && (address?.dirty || address?.touched)">
+                        <div *ngIf="address?.hasError('required')" style="color: red;">
+                            Address is required.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom04" class="form-label">Area<span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" formControlName="area" id="validationCustom04" required>
+                      <div *ngIf="area?.invalid && (area?.dirty || area?.touched)">
+                        <div *ngIf="area?.hasError('required')" style="color: red;">
+                            Area is required.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">City<span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" formControlName="city" id="validationCustom05" required>
+                      <div *ngIf="city?.invalid && (city?.dirty || city?.touched)">
+                        <div *ngIf="city?.hasError('required')" style="color: red;">
+                            City is required.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom06" class="form-label">Pincode<span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" formControlName="pincode" id="validationCustom06" required>
+                      <div *ngIf="pincode?.invalid && (pincode?.dirty || pincode?.touched)">
+                        <div *ngIf="pincode?.hasError('required')" style="color: red;">
+                            Pincode is required.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit" (click)="Savedetails()">Submit</button>
+                    </div>
+                  </form>
+                  
+                  
+                  
+            </div>
+          </div>
+      
+    </div>
+</section>

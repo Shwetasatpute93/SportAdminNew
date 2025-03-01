@@ -1,0 +1,162 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        
+        <i class="fas fa-user-circle"></i>  {{turfname}}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/landing">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" routerLink="/home">Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/terms">Terms&Conditions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contactus">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" routerLink="">Logout</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+</nav>
+  <div class="container">
+
+    <ng-container *ngIf="datadiv">
+      <div class="row m-3">
+          <div class="card my-2" routerLink="/home">
+              <div class="card-body text-uppercase text-muted mb-0">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Total Register Count</h4>
+                  <span  class="h2 font-weight-bold mb-0">{{record || 0}}</span>
+              </div>
+              
+          </div>
+          <div class="card my-2" (click)="dailyPayment()">
+            <div class="card-body text-uppercase text-muted mb-0">
+                <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                    <i class="fas fa-rupee-sign"></i>
+                  </div>
+                <h4>Daily Payment Count</h4>
+                <span class="h2 font-weight-bold mb-0">{{dailyrecord || 0}}</span>
+            </div>
+
+        </div>
+          <div class="card my-2" (click)="weeklyPayment()">
+              <div class="card-body text-uppercase text-muted mb-0">
+                  <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-rupee-sign"></i>
+                    </div>
+                  <h4>Weekly Payment Count</h4>
+                  <span class="h2 font-weight-bold mb-0">{{weekrecord || 0}}</span>
+              </div>
+
+          </div>
+          <div class="card my-2" (click)="monthlyPayment()">
+            <div class="card-body text-uppercase text-muted mb-0">
+                <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                    <i class="fas fa-rupee-sign"></i>
+                  </div>
+                <h4>Monthly Payment Count</h4>
+                <span class="h2 font-weight-bold mb-0">{{monthrecord || 0}}</span>
+            </div>
+
+        </div>
+      </div>
+    </ng-container>
+
+
+    <ng-container *ngIf="visible">
+
+      <div class="row m-3">
+        <h3 class="headclass" style="text-align: center;"> Daily Customer Records</h3>
+        <div class="card" *ngFor="let item of dailyrecord; let i=index">
+           
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Name : {{item.name || 'NA'}}</h2>
+
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Mobile : {{item.mobileno || 'NA'}}</h2>
+            </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Time Slots : {{item.timeslots || 'NA'}}</h2>
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Payment Status : {{item.status || 'NA'}}</h2>
+              </li>
+             
+            </ul>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="weekvisible">
+
+      <div class="row m-3">
+        <h3 class="headclass" style="text-align: center;"> Weekly Customer Records</h3>
+        <div class="card mb-3" *ngFor="let item of weekrecord; let i=index">
+            
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Name : {{item.name || 'NA'}}</h2>
+
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Mobile : {{item.mobileno || 'NA'}}</h2>
+            </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Time Slots : {{item.timeslots || 'NA'}}</h2>
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Payment Status : {{item.status || 'NA'}}</h2>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="monthvisible">
+
+      <div class="row m-3">
+        <h3 class="headclass" style="text-align: center;"> Monthly Customer Records</h3>
+        <div class="card mb-3" *ngFor="let item of monthrecord; let i=index">
+            
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Name : {{item.name || 'NA'}}</h2>
+
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Mobile : {{item.mobileno || 'NA'}}</h2>
+            </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Time Slots : {{item.timeslots || 'NA'}}</h2>
+              </li>
+              <li class="list-group-item">
+                <h2 class="h2 font-weight-bold mb-0">Payment Status : {{item.status || 'NA'}}</h2>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </ng-container>
+    
+  </div>
